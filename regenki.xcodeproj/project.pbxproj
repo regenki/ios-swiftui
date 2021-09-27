@@ -1,0 +1,690 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4D1CDE992700EEA500F4458A /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CDE982700EEA500F4458A /* CoreData.swift */; };
+		4D80B09C26FC4515003E0B91 /* ActivityViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D80B09B26FC4515003E0B91 /* ActivityViewPage.swift */; };
+		4D81207A26FB353B00F42C61 /* regenkiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81207926FB353B00F42C61 /* regenkiApp.swift */; };
+		4D81207C26FB353B00F42C61 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81207B26FB353B00F42C61 /* ContentView.swift */; };
+		4D81207E26FB353C00F42C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D81207D26FB353C00F42C61 /* Assets.xcassets */; };
+		4D81208126FB353C00F42C61 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D81208026FB353C00F42C61 /* Preview Assets.xcassets */; };
+		4D81208326FB353C00F42C61 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81208226FB353C00F42C61 /* Persistence.swift */; };
+		4D81208626FB353C00F42C61 /* regenki.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D81208426FB353C00F42C61 /* regenki.xcdatamodeld */; };
+		4D81209126FB353C00F42C61 /* regenkiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81209026FB353C00F42C61 /* regenkiTests.swift */; };
+		4D81209C26FB353C00F42C61 /* regenkiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81209B26FB353C00F42C61 /* regenkiUITests.swift */; };
+		4D8120AE26FB42EA00F42C61 /* OnBoardingViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8120AD26FB42EA00F42C61 /* OnBoardingViewPage.swift */; };
+		4DA0D60426FC564A00350E33 /* NoActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0D60326FC564A00350E33 /* NoActivity.swift */; };
+		4DA0D60626FC743F00350E33 /* AddActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0D60526FC743F00350E33 /* AddActivitySheet.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D81208D26FB353C00F42C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D81206E26FB353B00F42C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D81207526FB353B00F42C61;
+			remoteInfo = regenki;
+		};
+		4D81209826FB353C00F42C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4D81206E26FB353B00F42C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4D81207526FB353B00F42C61;
+			remoteInfo = regenki;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4D1CDE982700EEA500F4458A /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		4D80B09B26FC4515003E0B91 /* ActivityViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewPage.swift; sourceTree = "<group>"; };
+		4D81207626FB353B00F42C61 /* regenki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = regenki.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D81207926FB353B00F42C61 /* regenkiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regenkiApp.swift; sourceTree = "<group>"; };
+		4D81207B26FB353B00F42C61 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4D81207D26FB353C00F42C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4D81208026FB353C00F42C61 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4D81208226FB353C00F42C61 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4D81208526FB353C00F42C61 /* regenki.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = regenki.xcdatamodel; sourceTree = "<group>"; };
+		4D81208726FB353C00F42C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D81208C26FB353C00F42C61 /* regenkiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = regenkiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D81209026FB353C00F42C61 /* regenkiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regenkiTests.swift; sourceTree = "<group>"; };
+		4D81209226FB353C00F42C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D81209726FB353C00F42C61 /* regenkiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = regenkiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D81209B26FB353C00F42C61 /* regenkiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regenkiUITests.swift; sourceTree = "<group>"; };
+		4D81209D26FB353C00F42C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D8120AD26FB42EA00F42C61 /* OnBoardingViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewPage.swift; sourceTree = "<group>"; };
+		4DA0D60326FC564A00350E33 /* NoActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoActivity.swift; sourceTree = "<group>"; };
+		4DA0D60526FC743F00350E33 /* AddActivitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySheet.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D81207326FB353B00F42C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D81208926FB353C00F42C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D81209426FB353C00F42C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4D1CDE962700EC3D00F4458A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4D1CDE972700EC4500F4458A /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				4D1CDE982700EEA500F4458A /* CoreData.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		4D80B09826FC44E0003E0B91 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4D1CDE972700EC4500F4458A /* Local */,
+				4D1CDE962700EC3D00F4458A /* Service */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4D81206D26FB353B00F42C61 = {
+			isa = PBXGroup;
+			children = (
+				4D81207826FB353B00F42C61 /* regenki */,
+				4D81208F26FB353C00F42C61 /* regenkiTests */,
+				4D81209A26FB353C00F42C61 /* regenkiUITests */,
+				4D81207726FB353B00F42C61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4D81207726FB353B00F42C61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4D81207626FB353B00F42C61 /* regenki.app */,
+				4D81208C26FB353C00F42C61 /* regenkiTests.xctest */,
+				4D81209726FB353C00F42C61 /* regenkiUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4D81207826FB353B00F42C61 /* regenki */ = {
+			isa = PBXGroup;
+			children = (
+				4D80B09826FC44E0003E0B91 /* Helper */,
+				4D8120AB26FB420900F42C61 /* View */,
+				4D8120AA26FB420300F42C61 /* Model */,
+				4D8120A926FB41F800F42C61 /* Viewmodel */,
+				4D81207926FB353B00F42C61 /* regenkiApp.swift */,
+				4D81207B26FB353B00F42C61 /* ContentView.swift */,
+				4D81207D26FB353C00F42C61 /* Assets.xcassets */,
+				4D81208226FB353C00F42C61 /* Persistence.swift */,
+				4D81208726FB353C00F42C61 /* Info.plist */,
+				4D81208426FB353C00F42C61 /* regenki.xcdatamodeld */,
+				4D81207F26FB353C00F42C61 /* Preview Content */,
+			);
+			path = regenki;
+			sourceTree = "<group>";
+		};
+		4D81207F26FB353C00F42C61 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4D81208026FB353C00F42C61 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4D81208F26FB353C00F42C61 /* regenkiTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D81209026FB353C00F42C61 /* regenkiTests.swift */,
+				4D81209226FB353C00F42C61 /* Info.plist */,
+			);
+			path = regenkiTests;
+			sourceTree = "<group>";
+		};
+		4D81209A26FB353C00F42C61 /* regenkiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4D81209B26FB353C00F42C61 /* regenkiUITests.swift */,
+				4D81209D26FB353C00F42C61 /* Info.plist */,
+			);
+			path = regenkiUITests;
+			sourceTree = "<group>";
+		};
+		4D8120A926FB41F800F42C61 /* Viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Viewmodel;
+			sourceTree = "<group>";
+		};
+		4D8120AA26FB420300F42C61 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4D8120AB26FB420900F42C61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0D60226FC563500350E33 /* Components */,
+				4D8120AC26FB420E00F42C61 /* Page */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4D8120AC26FB420E00F42C61 /* Page */ = {
+			isa = PBXGroup;
+			children = (
+				4D8120AD26FB42EA00F42C61 /* OnBoardingViewPage.swift */,
+				4D80B09B26FC4515003E0B91 /* ActivityViewPage.swift */,
+			);
+			path = Page;
+			sourceTree = "<group>";
+		};
+		4DA0D60226FC563500350E33 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4DA0D60326FC564A00350E33 /* NoActivity.swift */,
+				4DA0D60526FC743F00350E33 /* AddActivitySheet.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4D81207526FB353B00F42C61 /* regenki */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8120A026FB353C00F42C61 /* Build configuration list for PBXNativeTarget "regenki" */;
+			buildPhases = (
+				4D81207226FB353B00F42C61 /* Sources */,
+				4D81207326FB353B00F42C61 /* Frameworks */,
+				4D81207426FB353B00F42C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = regenki;
+			productName = regenki;
+			productReference = 4D81207626FB353B00F42C61 /* regenki.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4D81208B26FB353C00F42C61 /* regenkiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8120A326FB353C00F42C61 /* Build configuration list for PBXNativeTarget "regenkiTests" */;
+			buildPhases = (
+				4D81208826FB353C00F42C61 /* Sources */,
+				4D81208926FB353C00F42C61 /* Frameworks */,
+				4D81208A26FB353C00F42C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D81208E26FB353C00F42C61 /* PBXTargetDependency */,
+			);
+			name = regenkiTests;
+			productName = regenkiTests;
+			productReference = 4D81208C26FB353C00F42C61 /* regenkiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4D81209626FB353C00F42C61 /* regenkiUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D8120A626FB353C00F42C61 /* Build configuration list for PBXNativeTarget "regenkiUITests" */;
+			buildPhases = (
+				4D81209326FB353C00F42C61 /* Sources */,
+				4D81209426FB353C00F42C61 /* Frameworks */,
+				4D81209526FB353C00F42C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D81209926FB353C00F42C61 /* PBXTargetDependency */,
+			);
+			name = regenkiUITests;
+			productName = regenkiUITests;
+			productReference = 4D81209726FB353C00F42C61 /* regenkiUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4D81206E26FB353B00F42C61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					4D81207526FB353B00F42C61 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					4D81208B26FB353C00F42C61 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4D81207526FB353B00F42C61;
+					};
+					4D81209626FB353C00F42C61 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 4D81207526FB353B00F42C61;
+					};
+				};
+			};
+			buildConfigurationList = 4D81207126FB353B00F42C61 /* Build configuration list for PBXProject "regenki" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4D81206D26FB353B00F42C61;
+			productRefGroup = 4D81207726FB353B00F42C61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4D81207526FB353B00F42C61 /* regenki */,
+				4D81208B26FB353C00F42C61 /* regenkiTests */,
+				4D81209626FB353C00F42C61 /* regenkiUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4D81207426FB353B00F42C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D81208126FB353C00F42C61 /* Preview Assets.xcassets in Resources */,
+				4D81207E26FB353C00F42C61 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D81208A26FB353C00F42C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D81209526FB353C00F42C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4D81207226FB353B00F42C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DA0D60626FC743F00350E33 /* AddActivitySheet.swift in Sources */,
+				4D81208326FB353C00F42C61 /* Persistence.swift in Sources */,
+				4D81208626FB353C00F42C61 /* regenki.xcdatamodeld in Sources */,
+				4D80B09C26FC4515003E0B91 /* ActivityViewPage.swift in Sources */,
+				4D1CDE992700EEA500F4458A /* CoreData.swift in Sources */,
+				4D8120AE26FB42EA00F42C61 /* OnBoardingViewPage.swift in Sources */,
+				4D81207C26FB353B00F42C61 /* ContentView.swift in Sources */,
+				4D81207A26FB353B00F42C61 /* regenkiApp.swift in Sources */,
+				4DA0D60426FC564A00350E33 /* NoActivity.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D81208826FB353C00F42C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D81209126FB353C00F42C61 /* regenkiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D81209326FB353C00F42C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D81209C26FB353C00F42C61 /* regenkiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D81208E26FB353C00F42C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D81207526FB353B00F42C61 /* regenki */;
+			targetProxy = 4D81208D26FB353C00F42C61 /* PBXContainerItemProxy */;
+		};
+		4D81209926FB353C00F42C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4D81207526FB353B00F42C61 /* regenki */;
+			targetProxy = 4D81209826FB353C00F42C61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4D81209E26FB353C00F42C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4D81209F26FB353C00F42C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4D8120A126FB353C00F42C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"regenki/Preview Content\"";
+				DEVELOPMENT_TEAM = G7Z2DR824B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = regenki/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.regenki.regenki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4D8120A226FB353C00F42C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"regenki/Preview Content\"";
+				DEVELOPMENT_TEAM = G7Z2DR824B;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = regenki/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.regenki.regenki;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4D8120A426FB353C00F42C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G7Z2DR824B;
+				INFOPLIST_FILE = regenkiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.regenki.regenkiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/regenki.app/regenki";
+			};
+			name = Debug;
+		};
+		4D8120A526FB353C00F42C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G7Z2DR824B;
+				INFOPLIST_FILE = regenkiTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.regenki.regenkiTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/regenki.app/regenki";
+			};
+			name = Release;
+		};
+		4D8120A726FB353C00F42C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G7Z2DR824B;
+				INFOPLIST_FILE = regenkiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.regenki.regenkiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = regenki;
+			};
+			name = Debug;
+		};
+		4D8120A826FB353C00F42C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G7Z2DR824B;
+				INFOPLIST_FILE = regenkiUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.regenki.regenkiUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = regenki;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4D81207126FB353B00F42C61 /* Build configuration list for PBXProject "regenki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D81209E26FB353C00F42C61 /* Debug */,
+				4D81209F26FB353C00F42C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D8120A026FB353C00F42C61 /* Build configuration list for PBXNativeTarget "regenki" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8120A126FB353C00F42C61 /* Debug */,
+				4D8120A226FB353C00F42C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D8120A326FB353C00F42C61 /* Build configuration list for PBXNativeTarget "regenkiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8120A426FB353C00F42C61 /* Debug */,
+				4D8120A526FB353C00F42C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D8120A626FB353C00F42C61 /* Build configuration list for PBXNativeTarget "regenkiUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D8120A726FB353C00F42C61 /* Debug */,
+				4D8120A826FB353C00F42C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4D81208426FB353C00F42C61 /* regenki.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4D81208526FB353C00F42C61 /* regenki.xcdatamodel */,
+			);
+			currentVersion = 4D81208526FB353C00F42C61 /* regenki.xcdatamodel */;
+			path = regenki.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4D81206E26FB353B00F42C61 /* Project object */;
+}
