@@ -8,51 +8,75 @@
 import SwiftUI
 
 struct AddActivitySheet: View {
+    @Environment(\.managedObjectContext) var moc
+    @StateObject var coreData = CoreDataService()
     let names = ["Holly","Josh","Rhonda","Ted"]
     let category = ["Dancing","Meditation","Running","Learning","Cleaning","Coding","Drawing","Walking Around","Fighting"]
-    let sticker = ["Peace","Laugh","Smile","Fear",""]
-    @State var angka = ""
+    let sticker = ["peace","micdrop","fear","smile","happy","gatcha","angry","twink","no","confused"]
+    @State var error:Bool = false
     @State private var titleText = ""
     @State private var categoryText = ""
     @State private var datePicker = Date()
-    @State private var stickerImage = ""
+    @State private var stickerImage = "peace"
     
-    var searchResults:[String]{
-        if angka.isEmpty{
-            return names
-        }
-        else{
-            return names.filter{$0.contains(angka)}
-        }
-    }
+    
     
     var body: some View {
-        GeometryReader{ item in
-            VStack{
-                HStack{
-                    Button(action: {}, label: {
-                        Text("Cancel").fontWeight(.semibold).foregroundColor(.red)
+        NavigationView{
+            
+                VStack{
+                    HStack{
+                        Button(action: {}, label: {
+                            Text("Cancel").fontWeight(.semibold).foregroundColor(.red)
+                           
+                            
+                            
+                        })
                         Spacer()
-                        Text("Save").fontWeight(.semibold).foregroundColor(.green)
+                        Button(action: {
+                            if titleText.isEmpty || categoryText.isEmpty{
+                                self.error.toggle()
+                            }else{
+                                let activity = Activity(context: self.moc)
+                                coreData.add(data: activity, title: titleText, category: categoryText, sticker: stickerImage, date: datePicker)
+                                do{
+                                    try moc.save()
+                                }
+                                catch{
+                                    print("Error Sorry about saving data")
+                                }
+                            }
+                           
+                            
+                        }, label: {
+                            Text("Save").fontWeight(.semibold).foregroundColor(.green)
+                        })
+                    }.alert(isPresented: $error, content: {Alert(title: Text("Error"), message:Text("Please dont empty field"), dismissButton: .destructive(Text("Close")))}).padding([.horizontal,.top],24)
+                    Form{
+                        Section(header:Text("Add Data")){
+                            TextField("Input Title", text: $titleText).textFieldStyle(.roundedBorder).padding()
+                            Picker("Category", selection: $categoryText, content: {
+                                ForEach(category,id:\.self){category in
+                                    Text(category)
+                                }
+                            }).pickerStyle(.menu)
+                            DatePicker("Date", selection: $datePicker)
+                            Picker("Choose Sticker",selection:$stickerImage){
+                                ForEach(sticker,id:\.self){emote in
+                                    HStack{
+                                       Text("\(emote)").bold()
+                                    }
+                                }
+                            }
+                            Image("\(stickerImage)").resizable().frame(width:100,height:100)
+                        }
                         
-                    })
-                }.padding([.horizontal,.top],24)
-                
-                TextField("Text", text: $titleText).textFieldStyle(.roundedBorder).padding([.horizontal],24).padding([.top],36)
-                Picker("", selection: $categoryText, content: {
-                    ForEach(category,id:\.self){category in
-                        Text(category)
                     }
-                }).padding([.horizontal,],24).padding([.vertical],20).pickerStyle(.inline)
-                DatePicker("Date", selection: $datePicker).padding([.horizontal],24)
-                Picker("Sticker",selection:$stickerImage){
-                    ForEach(sticker,id:\.self){emote in
-                        Image("")
-                    }
+     
                 }
-                
             }
-        }
+        
+        
     }
 }
 
