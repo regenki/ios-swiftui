@@ -13,7 +13,7 @@ struct regenkiApp: App {
 
     var body: some Scene {
         WindowGroup {
-            AddActivitySheet()
+            OnBoardingViewPage()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext) 
         }
     }

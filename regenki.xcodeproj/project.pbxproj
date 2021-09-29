@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D1CDE992700EEA500F4458A /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1CDE982700EEA500F4458A /* CoreData.swift */; };
+		4D4E99242704406C00F27096 /* DetailActivityViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4E99232704406C00F27096 /* DetailActivityViewPage.swift */; };
 		4D80B09C26FC4515003E0B91 /* ActivityViewPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D80B09B26FC4515003E0B91 /* ActivityViewPage.swift */; };
 		4D81207A26FB353B00F42C61 /* regenkiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D81207926FB353B00F42C61 /* regenkiApp.swift */; };
 		4D81207E26FB353C00F42C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D81207D26FB353C00F42C61 /* Assets.xcassets */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		4D1CDE982700EEA500F4458A /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		4D4E99232704406C00F27096 /* DetailActivityViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailActivityViewPage.swift; sourceTree = "<group>"; };
 		4D80B09B26FC4515003E0B91 /* ActivityViewPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewPage.swift; sourceTree = "<group>"; };
 		4D81207626FB353B00F42C61 /* regenki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = regenki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D81207926FB353B00F42C61 /* regenkiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = regenkiApp.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			children = (
 				4D8120AD26FB42EA00F42C61 /* OnBoardingViewPage.swift */,
 				4D80B09B26FC4515003E0B91 /* ActivityViewPage.swift */,
+				4D4E99232704406C00F27096 /* DetailActivityViewPage.swift */,
 			);
 			path = Page;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				4D8120AE26FB42EA00F42C61 /* OnBoardingViewPage.swift in Sources */,
 				4D81207A26FB353B00F42C61 /* regenkiApp.swift in Sources */,
 				4DA0D60426FC564A00350E33 /* NoActivity.swift in Sources */,
+				4D4E99242704406C00F27096 /* DetailActivityViewPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

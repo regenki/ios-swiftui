@@ -9,6 +9,9 @@ import SwiftUI
 
 struct Activitytile: View {
     
+    var title:String
+    var category:String
+    var dateData:Date
     var timeFormat:DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
@@ -50,6 +53,6 @@ struct Activitytile: View {
 
 struct Activitytile_Previews: PreviewProvider {
     static var previews: some View {
-        Activitytile()
+        Activitytile(title: "", category: "", dateData: Date())
     }
 }

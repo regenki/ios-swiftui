@@ -8,10 +8,13 @@
 import SwiftUI
 
 struct ActivityViewPage: View {
-    @State var searchActivity:String = ""
-    @State var addSheet:Bool = false
+    @State private var searchActivity:String = ""
+    @State private var addSheet:Bool = false
+    @State private var isSearchin:Bool = false
+    @FetchRequest(entity: Activity.entity(), sortDescriptors: [], predicate: nil, animation: nil)
+    private var activity:FetchedResults<Activity>
     var body: some View {
-        NavigationView{
+        
             GeometryReader{ reader in
                 VStack{
                     TextField("Search", text: $searchActivity).textFieldStyle(RoundedBorderTextFieldStyle()).padding([.horizontal],24)
@@ -33,14 +36,20 @@ struct ActivityViewPage: View {
                         AddActivitySheet()
                     })
                     //NoActivity().padding([.top],64)
-                    List{
-                        ForEach(0..<5){ _ in
-                            NavigationLink(destination: Text("Hallo"), label: {Activitytile()})
+                    if activity.count == 0{
+                        NoActivity().padding(.top,64)
+                    }
+                    else{
+                        List{
+                            ForEach(activity){ item in
+                                NavigationLink(destination: Text("Hallo"), label: {Activitytile(title: item.title ?? "", category:item.category ?? "", dateData: item.date!)})
+                                
+                            }
+                                
                             
-                        }
-                            
-                        
-                    }.listStyle(.plain)
+                        }.listStyle(.plain)
+                    }
+                    
                     /*ScrollView{
                         ForEach(0..<5){_ in
                             Activitytile()
@@ -51,7 +60,7 @@ struct ActivityViewPage: View {
                     
                 }.navigationTitle("Activity").navigationBarBackButtonHidden(true)
             }
-        }
+        
         
         
     }
