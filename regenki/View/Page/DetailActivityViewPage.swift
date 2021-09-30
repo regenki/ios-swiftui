@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DetailActivityViewPage: View {
+    var data:Activity
     var date:DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE,MMMM,d"
@@ -21,13 +22,13 @@ struct DetailActivityViewPage: View {
                     ZStack{
                         
                         RoundedRectangle(cornerRadius: 12, style: .continuous).frame(width: 72, height: 72, alignment: .center).foregroundColor(.purple)
-                        Image("smile").resizable().frame(width: 72, height: 72, alignment: .center)
+                        Image(data.sticker!).resizable().frame(width: 72, height: 72, alignment: .center)
                     }.position(x: item.size.width - 100, y: -20).frame( height: 20)
                     VStack(alignment:.leading){
                         
-                        Text("Dancing").fontWeight(Font.Weight.semibold).multilineTextAlignment(.leading).font(.system(size: 20))
-                        Text("Dancing BTS").fontWeight(Font.Weight.semibold).multilineTextAlignment(.leading).font(.system(size: 24))
-                        Text(Date(),formatter: date)
+                        Text(data.category!).fontWeight(Font.Weight.semibold).multilineTextAlignment(.leading).font(.system(size: 20))
+                        Text(data.title!).fontWeight(Font.Weight.semibold).multilineTextAlignment(.leading).font(.system(size: 24))
+                        Text(data.date!,formatter: date)
                         
                     }.frame(width:item.size.width - 48,alignment:.leading).padding(.horizontal,24)
                     Spacer()
@@ -67,6 +68,6 @@ struct DetailActivityViewPage: View {
 
 struct DetailActivityViewPage_Previews: PreviewProvider {
     static var previews: some View {
-        DetailActivityViewPage()
+        DetailActivityViewPage(data: Activity())
     }
 }

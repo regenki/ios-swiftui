@@ -12,6 +12,7 @@ struct Activitytile: View {
     var title:String
     var category:String
     var dateData:Date
+    var sticker:String
     var timeFormat:DateFormatter = {
         let formatter = DateFormatter()
         formatter.timeStyle = .short
@@ -29,18 +30,18 @@ struct Activitytile: View {
            
                
                 HStack{
-                    Image("fear").resizable().frame(width: 96, height: 96, alignment: .center)
+                    Image(sticker).resizable().frame(width: 96, height: 96, alignment: .center)
                     
                     
                     VStack(alignment:.leading){
-                        Text("Dancing").fontWeight(.semibold).font(.system( size: 20)).padding(.top,4)
+                        Text(category).fontWeight(.semibold).font(.system( size: 20)).padding(.top,4)
                         
-                        Text("Dancing BTS").fontWeight(.regular).font(.system(size: 16))
+                        Text(title).fontWeight(.regular).font(.system(size: 16))
                         Spacer()
-                        Text(Date(),formatter: date).fontWeight(.semibold).padding(.bottom)
-                    }
+                        Text(dateData,formatter: date).fontWeight(.semibold).padding(.bottom)
+                    }.padding(.vertical,8)
                     Spacer()
-                    Text(Date(),formatter: timeFormat).font(.system(size: 16)).fontWeight(.semibold).padding(.trailing)
+                    Text(dateData,formatter: timeFormat).font(.system(size: 16)).fontWeight(.semibold).padding(.trailing)
                     
                 }
                 .background( RoundedRectangle(cornerRadius: 12, style: .continuous).stroke(Color.blue,lineWidth: 4))
@@ -53,6 +54,6 @@ struct Activitytile: View {
 
 struct Activitytile_Previews: PreviewProvider {
     static var previews: some View {
-        Activitytile(title: "", category: "", dateData: Date())
+        Activitytile(title: "Aww", category: "", dateData: Date(), sticker: "")
     }
 }

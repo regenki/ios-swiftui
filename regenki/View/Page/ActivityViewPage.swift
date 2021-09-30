@@ -11,6 +11,7 @@ struct ActivityViewPage: View {
     @State private var searchActivity:String = ""
     @State private var addSheet:Bool = false
     @State private var isSearchin:Bool = false
+    @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Activity.entity(), sortDescriptors: [], predicate: nil, animation: nil)
     private var activity:FetchedResults<Activity>
     var body: some View {
@@ -32,7 +33,7 @@ struct ActivityViewPage: View {
                                 
                             }.padding([.horizontal,.top],24)
                         }
-                    }).sheet(isPresented: $addSheet, onDismiss: dismiss, content: {
+                    }).sheet(isPresented: $addSheet, onDismiss: {}, content: {
                         AddActivitySheet()
                     })
                     //NoActivity().padding([.top],64)
@@ -42,9 +43,11 @@ struct ActivityViewPage: View {
                     else{
                         List{
                             ForEach(activity){ item in
-                                NavigationLink(destination: Text("Hallo"), label: {Activitytile(title: item.title ?? "", category:item.category ?? "", dateData: item.date!)})
+                                NavigationLink(destination: DetailActivityViewPage(data: item), label: {Activitytile(title: item.title ?? "", category:item.category ?? "", dateData: item.date!,sticker: item.sticker!)})
                                 
-                            }
+                            }.onDelete(perform: {indexSet in
+                                delete(indexSet: indexSet)
+                            })
                                 
                             
                         }.listStyle(.plain)
@@ -64,8 +67,16 @@ struct ActivityViewPage: View {
         
         
     }
-    func dismiss(){
-        
+    func delete(indexSet:IndexSet){
+        for index in indexSet{
+            moc.delete(activity[index])
+            
+        }
+        do{
+            try moc.save()
+        }catch{
+            print(error.localizedDescription)
+        }
     }
 }
 

@@ -11,7 +11,7 @@ struct NoActivity: View {
     var body: some View {
         VStack{
             Image("NoActivity")
-            Text("No Activity \nGanbatte yooo").multilineTextAlignment(.center)
+            Text("No Activity \nGanbatte yooo").fontWeight(.semibold).multilineTextAlignment(.center)
         }
     }
 }
