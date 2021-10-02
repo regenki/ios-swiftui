@@ -9,6 +9,8 @@ import SwiftUI
 
 struct DetailActivityViewPage: View {
     var data:Activity
+    @Environment(\.managedObjectContext) var moc
+    @State private var editSheet:Bool = false
     var date:DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "EEEE,MMMM,d"
@@ -33,32 +35,49 @@ struct DetailActivityViewPage: View {
                     }.frame(width:item.size.width - 48,alignment:.leading).padding(.horizontal,24)
                     Spacer()
                     VStack{
-                        Button(action: {
-                            
-                        }, label: {
-                            ZStack(alignment:.center){
-                                RoundedRectangle(cornerRadius: 12, style: .continuous).stroke(Color("AccentColor"),lineWidth:4).frame(height:72).padding(.horizontal,24).foregroundColor(.white)
-                                Text("Edit").font(.title2).fontWeight(.semibold)
-                            }
-                        }).padding(.bottom,8)
-                        Button(action: {
-                            
-                        }, label: {
-                            ZStack(alignment:.center){
-                                RoundedRectangle(cornerRadius: 12, style: .continuous).stroke(Color.red,lineWidth:8).frame(height:72).padding(.horizontal,24).foregroundColor(.white)
-                                HStack{
-                                    Image(systemName: "trash.fill").foregroundColor(.red).font(.title2)
-                                    Text("Hapus").foregroundColor(.red).font(.title2).fontWeight(.semibold)
-                                }
+                        if data.isDone == false{
+                            Button(action: {
+                                data.isDone = true
                                 
-                            }
-                        }).padding(.bottom,12)
+                                    do{
+                                        
+                                    
+                                       try moc.save()
+                                    }catch{
+                                        
+                                    }
+                                
+                            }, label: {
+                                if data.isDone == false{
+                                    ZStack(alignment:.center){
+                                        RoundedRectangle(cornerRadius: 12, style: .continuous).foregroundColor(Color("AccentColor")).frame(height:72).padding(.horizontal,24).foregroundColor(.white)
+                                        Text("Done").font(.title2).fontWeight(.semibold).foregroundColor(.white)
+                                    }
+                                }else{
+                                    ZStack(alignment:.center){
+                                        RoundedRectangle(cornerRadius: 12, style: .continuous).foregroundColor(Color("AccentColor")).frame(height:72).padding(.horizontal,24).foregroundColor(.white)
+                                        Text("Clear").font(.title2).fontWeight(.semibold).foregroundColor(.white)
+                                    }
+                                }
+                               
+                            }).padding(.bottom,12)
+                        }
+                        else{
+                            ZStack(alignment:.center){
+                                RoundedRectangle(cornerRadius: 12, style: .continuous).foregroundColor(Color("AccentColor")).frame(height:72).padding(.horizontal,24).foregroundColor(.white)
+                                Text("Clear").font(.title2).fontWeight(.semibold).foregroundColor(.white)
+                            }.padding(.bottom,12)
+                        }
+                       
+                        
                     }
                     
                     
                     
-                }.navigationBarItems(trailing: Button(action: {}, label: {
-                    Image(systemName: "love")
+                }.navigationBarItems(trailing: Button(action: {editSheet.toggle()}, label: {
+                    Image("edit").resizable().frame(width: 48, height: 48, alignment: .center)
+                }).sheet(isPresented: $editSheet, content: {
+                    EditActivitySheet(data: data)
                 }))
         
         

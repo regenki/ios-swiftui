@@ -10,7 +10,7 @@ import SwiftUI
 struct AddActivitySheet: View {
     @Environment(\.managedObjectContext) var moc
     @StateObject var coreData = CoreDataService()
-    let names = ["Holly","Josh","Rhonda","Ted"]
+   
     let category = ["Dancing","Meditation","Running","Learning","Cleaning","Coding","Drawing","Walking Around","Fighting"]
     let sticker = ["peace","micdrop","fear","smile","happy","gatcha","angry","twink","no","confused"]
     @State var error:Bool = false

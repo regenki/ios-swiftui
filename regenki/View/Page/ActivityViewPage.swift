@@ -12,7 +12,7 @@ struct ActivityViewPage: View {
     @State private var addSheet:Bool = false
     @State private var isSearchin:Bool = false
     @Environment(\.managedObjectContext) var moc
-    @FetchRequest(entity: Activity.entity(), sortDescriptors: [], predicate: nil, animation: nil)
+    @FetchRequest(entity: Activity.entity(), sortDescriptors: [], predicate: NSPredicate(format: "isDone = %d",false), animation: nil)
     private var activity:FetchedResults<Activity>
     var body: some View {
         
