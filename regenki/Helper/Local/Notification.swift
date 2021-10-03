@@ -24,9 +24,15 @@ class Notification:ObservableObject{
             contentNotification.title = data.title!
             contentNotification.subtitle = data.category!
             contentNotification.categoryIdentifier = data.title ?? UUID().description
+            contentNotification.sound = UNNotificationSound(named: UNNotificationSoundName.init(rawValue: "yay.wav"))
             
-            guard let image = Bundle.main.path(forResource: "", ofType: "png")else{return}
+            
+            guard let image = Bundle.main.path(forResource: "\(String(describing: data.sticker!))", ofType: "png")else{
+            return
+                
+            }
             let attachement = try UNNotificationAttachment(identifier: "", url: URL(fileURLWithPath: image), options: nil)
+            contentNotification.attachments = [attachement]
             let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.day,.month,.year,.hour,.minute], from: data.date!), repeats: false)
             let request = UNNotificationRequest(identifier: UUID().uuidString, content: contentNotification, trigger: trigger)
             userNotificationCenter.self

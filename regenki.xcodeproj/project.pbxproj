@@ -34,6 +34,7 @@
 		4DF70AE92709A08300D06E1C /* no.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70ADF2709A08200D06E1C /* no.png */; };
 		4DF70AEA2709A08300D06E1C /* peace.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70AE02709A08300D06E1C /* peace.png */; };
 		4DF70AEB2709A08300D06E1C /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70AE12709A08300D06E1C /* smile.png */; };
+		4DF70AED2709A6E700D06E1C /* yay.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70AEC2709A6E700D06E1C /* yay.wav */; };
 		4DF848052701FA17008D170C /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF848032701FA17008D170C /* Activity+CoreDataClass.swift */; };
 		4DF848062701FA17008D170C /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF848042701FA17008D170C /* Activity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -89,6 +90,7 @@
 		4DF70ADF2709A08200D06E1C /* no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no.png; sourceTree = "<group>"; };
 		4DF70AE02709A08300D06E1C /* peace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peace.png; sourceTree = "<group>"; };
 		4DF70AE12709A08300D06E1C /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
+		4DF70AEC2709A6E700D06E1C /* yay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yay.wav; sourceTree = "<group>"; };
 		4DF848032701FA17008D170C /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4DF848042701FA17008D170C /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -283,6 +285,7 @@
 		4DF70AD727099F4B00D06E1C /* voice */ = {
 			isa = PBXGroup;
 			children = (
+				4DF70AEC2709A6E700D06E1C /* yay.wav */,
 			);
 			path = voice;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 			files = (
 				4DF70AE92709A08300D06E1C /* no.png in Resources */,
 				4DF70AE22709A08300D06E1C /* micdrop.png in Resources */,
+				4DF70AED2709A6E700D06E1C /* yay.wav in Resources */,
 				4DF70AE32709A08300D06E1C /* angry.png in Resources */,
 				4DF70AE42709A08300D06E1C /* twink.png in Resources */,
 				4D81208126FB353C00F42C61 /* Preview Assets.xcassets in Resources */,
