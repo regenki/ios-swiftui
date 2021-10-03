@@ -9,24 +9,29 @@ import SwiftUI
 
 struct AddActivitySheet: View {
     @Environment(\.managedObjectContext) var moc
+    @Environment(\.presentationMode) var persentationMode
     @StateObject var coreData = CoreDataService()
+    @StateObject var notification = Notification()
    
-    let category = ["Dancing","Meditation","Running","Learning","Cleaning","Coding","Drawing","Walking Around","Fighting"]
+    let category = ["Dancing","Meditation","Running","Learning","Cleaning","Coding","Drawing","Walking Around","Fighting","Others"]
     let sticker = ["peace","micdrop","fear","smile","happy","gatcha","angry","twink","no","confused"]
     @State var error:Bool = false
     @State private var titleText = ""
     @State private var categoryText = ""
+    @State private var categoryInputText = ""
     @State private var datePicker = Date()
     @State private var stickerImage = "peace"
     
     
     
     var body: some View {
+        
         NavigationView{
-            
                 VStack{
                     HStack{
-                        Button(action: {}, label: {
+                        Button(action: {
+                            self.persentationMode.wrappedValue.dismiss()
+                        }, label: {
                             Text("Cancel").fontWeight(.semibold).foregroundColor(.red)
                            
                             
@@ -37,8 +42,17 @@ struct AddActivitySheet: View {
                             if titleText.isEmpty || categoryText.isEmpty{
                                 self.error.toggle()
                             }else{
-                                let activity = Activity(context: self.moc)
-                                coreData.add(data: activity, title: titleText, category: categoryText, sticker: stickerImage, date: datePicker)
+                                self.persentationMode.wrappedValue.dismiss()
+                                var activity = Activity(context: self.moc)
+                                
+                                if categoryText == "Others"{
+                                    activity = coreData.add(data: activity, title: titleText, category: categoryInputText, sticker: stickerImage, date: datePicker)
+                                }else{
+                                    activity = coreData.add(data: activity, title: titleText, category: categoryText, sticker: stickerImage, date: datePicker)
+                                }
+                                notification.schenduled(notification: activity)
+                                
+                                
                                 do{
                                     try moc.save()
                                 }
@@ -60,6 +74,9 @@ struct AddActivitySheet: View {
                                     Text(category)
                                 }
                             }).pickerStyle(.menu)
+                            if categoryText == "Others"{
+                                TextField("Input Category", text: $categoryInputText).textFieldStyle(.roundedBorder).padding()
+                            }
                             DatePicker("Date", selection: $datePicker)
                             Picker("Choose Sticker",selection:$stickerImage){
                                 ForEach(sticker,id:\.self){emote in
@@ -73,9 +90,9 @@ struct AddActivitySheet: View {
                         
                     }
      
-                }
-            }
-        
+                }.navigationBarHidden(true)
+            
+        }
         
     }
 }

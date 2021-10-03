@@ -57,6 +57,9 @@ struct EditActivitySheet: View {
                             Text(category)
                         }
                     }).pickerStyle(.menu)
+                    if categoryText == "Others"{
+                        TextField("Input Category", text: $categoryText).textFieldStyle(.roundedBorder).padding()
+                    }
                     DatePicker("Date", selection: $dateData)
                     Picker("Choose Sticker",selection:$stickerImage){
                         ForEach(sticker,id:\.self){emote in

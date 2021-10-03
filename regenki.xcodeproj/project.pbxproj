@@ -22,6 +22,18 @@
 		4DA0D60626FC743F00350E33 /* AddActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA0D60526FC743F00350E33 /* AddActivitySheet.swift */; };
 		4DC0A1FA2702FAAE00EBD7FA /* Activitytile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC0A1F92702FAAE00EBD7FA /* Activitytile.swift */; };
 		4DDDB24727078CA600647E97 /* EditActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DDDB24627078CA600647E97 /* EditActivitySheet.swift */; };
+		4DF70AD02709636F00D06E1C /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF70ACF2709636F00D06E1C /* SearchBar.swift */; };
+		4DF70AD227097CB000D06E1C /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF70AD127097CB000D06E1C /* Notification.swift */; };
+		4DF70AE22709A08300D06E1C /* micdrop.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70AD82709A08100D06E1C /* micdrop.png */; };
+		4DF70AE32709A08300D06E1C /* angry.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70AD92709A08100D06E1C /* angry.png */; };
+		4DF70AE42709A08300D06E1C /* twink.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70ADA2709A08200D06E1C /* twink.png */; };
+		4DF70AE52709A08300D06E1C /* fear.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70ADB2709A08200D06E1C /* fear.png */; };
+		4DF70AE62709A08300D06E1C /* happy.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70ADC2709A08200D06E1C /* happy.png */; };
+		4DF70AE72709A08300D06E1C /* gatcha.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70ADD2709A08200D06E1C /* gatcha.png */; };
+		4DF70AE82709A08300D06E1C /* confused.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70ADE2709A08200D06E1C /* confused.png */; };
+		4DF70AE92709A08300D06E1C /* no.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70ADF2709A08200D06E1C /* no.png */; };
+		4DF70AEA2709A08300D06E1C /* peace.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70AE02709A08300D06E1C /* peace.png */; };
+		4DF70AEB2709A08300D06E1C /* smile.png in Resources */ = {isa = PBXBuildFile; fileRef = 4DF70AE12709A08300D06E1C /* smile.png */; };
 		4DF848052701FA17008D170C /* Activity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF848032701FA17008D170C /* Activity+CoreDataClass.swift */; };
 		4DF848062701FA17008D170C /* Activity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF848042701FA17008D170C /* Activity+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +77,18 @@
 		4DA0D60526FC743F00350E33 /* AddActivitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddActivitySheet.swift; sourceTree = "<group>"; };
 		4DC0A1F92702FAAE00EBD7FA /* Activitytile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activitytile.swift; sourceTree = "<group>"; };
 		4DDDB24627078CA600647E97 /* EditActivitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditActivitySheet.swift; sourceTree = "<group>"; };
+		4DF70ACF2709636F00D06E1C /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		4DF70AD127097CB000D06E1C /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		4DF70AD82709A08100D06E1C /* micdrop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = micdrop.png; sourceTree = "<group>"; };
+		4DF70AD92709A08100D06E1C /* angry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = angry.png; sourceTree = "<group>"; };
+		4DF70ADA2709A08200D06E1C /* twink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twink.png; sourceTree = "<group>"; };
+		4DF70ADB2709A08200D06E1C /* fear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fear.png; sourceTree = "<group>"; };
+		4DF70ADC2709A08200D06E1C /* happy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = happy.png; sourceTree = "<group>"; };
+		4DF70ADD2709A08200D06E1C /* gatcha.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gatcha.png; sourceTree = "<group>"; };
+		4DF70ADE2709A08200D06E1C /* confused.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = confused.png; sourceTree = "<group>"; };
+		4DF70ADF2709A08200D06E1C /* no.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = no.png; sourceTree = "<group>"; };
+		4DF70AE02709A08300D06E1C /* peace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = peace.png; sourceTree = "<group>"; };
+		4DF70AE12709A08300D06E1C /* smile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smile.png; sourceTree = "<group>"; };
 		4DF848032701FA17008D170C /* Activity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		4DF848042701FA17008D170C /* Activity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Activity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				4D1CDE982700EEA500F4458A /* CoreData.swift */,
+				4DF70AD127097CB000D06E1C /* Notification.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -141,6 +166,7 @@
 		4D81207826FB353B00F42C61 /* regenki */ = {
 			isa = PBXGroup;
 			children = (
+				4DF70AD3270985CA00D06E1C /* asset */,
 				4D80B09826FC44E0003E0B91 /* Helper */,
 				4D8120AB26FB420900F42C61 /* View */,
 				4D8120AA26FB420300F42C61 /* Model */,
@@ -223,8 +249,42 @@
 				4DA0D60526FC743F00350E33 /* AddActivitySheet.swift */,
 				4DC0A1F92702FAAE00EBD7FA /* Activitytile.swift */,
 				4DDDB24627078CA600647E97 /* EditActivitySheet.swift */,
+				4DF70ACF2709636F00D06E1C /* SearchBar.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		4DF70AD3270985CA00D06E1C /* asset */ = {
+			isa = PBXGroup;
+			children = (
+				4DF70AD727099F4B00D06E1C /* voice */,
+				4DF70AD627099F4600D06E1C /* image */,
+			);
+			path = asset;
+			sourceTree = "<group>";
+		};
+		4DF70AD627099F4600D06E1C /* image */ = {
+			isa = PBXGroup;
+			children = (
+				4DF70AD92709A08100D06E1C /* angry.png */,
+				4DF70ADE2709A08200D06E1C /* confused.png */,
+				4DF70ADB2709A08200D06E1C /* fear.png */,
+				4DF70ADD2709A08200D06E1C /* gatcha.png */,
+				4DF70ADC2709A08200D06E1C /* happy.png */,
+				4DF70AD82709A08100D06E1C /* micdrop.png */,
+				4DF70ADF2709A08200D06E1C /* no.png */,
+				4DF70AE02709A08300D06E1C /* peace.png */,
+				4DF70AE12709A08300D06E1C /* smile.png */,
+				4DF70ADA2709A08200D06E1C /* twink.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
+		4DF70AD727099F4B00D06E1C /* voice */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = voice;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +390,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF70AE92709A08300D06E1C /* no.png in Resources */,
+				4DF70AE22709A08300D06E1C /* micdrop.png in Resources */,
+				4DF70AE32709A08300D06E1C /* angry.png in Resources */,
+				4DF70AE42709A08300D06E1C /* twink.png in Resources */,
 				4D81208126FB353C00F42C61 /* Preview Assets.xcassets in Resources */,
+				4DF70AE82709A08300D06E1C /* confused.png in Resources */,
 				4D81207E26FB353C00F42C61 /* Assets.xcassets in Resources */,
+				4DF70AE72709A08300D06E1C /* gatcha.png in Resources */,
+				4DF70AE52709A08300D06E1C /* fear.png in Resources */,
+				4DF70AEA2709A08300D06E1C /* peace.png in Resources */,
+				4DF70AEB2709A08300D06E1C /* smile.png in Resources */,
+				4DF70AE62709A08300D06E1C /* happy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,9 +433,11 @@
 				4D81208626FB353C00F42C61 /* regenki.xcdatamodeld in Sources */,
 				4D80B09C26FC4515003E0B91 /* ActivityViewPage.swift in Sources */,
 				4DF848052701FA17008D170C /* Activity+CoreDataClass.swift in Sources */,
+				4DF70AD02709636F00D06E1C /* SearchBar.swift in Sources */,
 				4D1CDE992700EEA500F4458A /* CoreData.swift in Sources */,
 				4D8120AE26FB42EA00F42C61 /* OnBoardingViewPage.swift in Sources */,
 				4D81207A26FB353B00F42C61 /* regenkiApp.swift in Sources */,
+				4DF70AD227097CB000D06E1C /* Notification.swift in Sources */,
 				4DA0D60426FC564A00350E33 /* NoActivity.swift in Sources */,
 				4D4E99242704406C00F27096 /* DetailActivityViewPage.swift in Sources */,
 				4DDDB24727078CA600647E97 /* EditActivitySheet.swift in Sources */,

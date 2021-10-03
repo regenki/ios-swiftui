@@ -10,15 +10,19 @@ import SwiftUI
 struct ActivityViewPage: View {
     @State private var searchActivity:String = ""
     @State private var addSheet:Bool = false
-    @State private var isSearchin:Bool = false
+    @State private var isSearching:Bool = false
     @Environment(\.managedObjectContext) var moc
     @FetchRequest(entity: Activity.entity(), sortDescriptors: [], predicate: NSPredicate(format: "isDone = %d",false), animation: nil)
     private var activity:FetchedResults<Activity>
+    
+    
+    
+
     var body: some View {
         
             GeometryReader{ reader in
                 VStack{
-                    TextField("Search", text: $searchActivity).textFieldStyle(RoundedBorderTextFieldStyle()).padding([.horizontal],24)
+                    SearchBar(searchText: $searchActivity, searching: $isSearching).padding(.horizontal,12)
                     Button(action: {
                         self.addSheet = true
                     }, label: {
@@ -42,8 +46,13 @@ struct ActivityViewPage: View {
                     }
                     else{
                         List{
-                            ForEach(activity){ item in
-                                NavigationLink(destination: DetailActivityViewPage(data: item), label: {Activitytile(title: item.title ?? "", category:item.category ?? "", dateData: item.date!,sticker: item.sticker!)})
+                            ForEach( activity.filter{self.searchActivity.isEmpty ? true : $0.title!.lowercased().contains(searchActivity.lowercased())}){ item in
+                                ZStack{
+                                    
+                                    Activitytile(title: item.title ?? "", category:item.category ?? "", dateData: item.date!,sticker: item.sticker!).padding(.horizontal,6)
+                                    NavigationLink(destination: DetailActivityViewPage(data: item), label: {Activitytile(title: item.title ?? "", category:item.category ?? "", dateData: item.date!,sticker: item.sticker!)}).opacity(0)
+                                }
+                                
                                 
                             }.onDelete(perform: {indexSet in
                                 delete(indexSet: indexSet)
@@ -83,5 +92,11 @@ struct ActivityViewPage: View {
 struct ActivityViewPage_Previews: PreviewProvider {
     static var previews: some View {
         ActivityViewPage()
+    }
+}
+
+extension UIApplication{
+    func didmissKeyboard(){
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
